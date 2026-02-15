@@ -3,10 +3,10 @@ class Koescript < Formula
 
   desc "Real-time multilingual transcription and translation with GPU acceleration"
   homepage "https://github.com/KunalKatariya/koescript"
-  url "https://github.com/KunalKatariya/koescript/archive/refs/tags/v0.1.1.tar.gz"
-  sha256 "f2fd5a2a9de7f1dcdcff2ad70f0cc090a350e9986e2fa1892cb41f50d2acf5b6"
+  url "https://github.com/KunalKatariya/koescript/archive/refs/tags/v0.2.0.tar.gz"
+  sha256 "373d539a331e5ded6e8f28110914abd4c680bb0ea99d1f8fba24d97968fa1bb6"
   license "MIT"
-  version "0.1.1"
+  version "0.2.0"
 
   depends_on "python@3.11"
   depends_on "portaudio"
