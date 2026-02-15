@@ -29,11 +29,8 @@ A live translation CLI tool for macOS. Capture system audio in real-time, transc
 ### Option 1: Install from PyPI (Recommended)
 
 ```bash
-# Install the latest version
-pip install koescript
-
-# Or with pip3
-pip3 install koescript
+brew tap KunalKatariya/koescript
+brew install koescript
 ```
 
 After installation, the `koescript` command will be available globally.
@@ -53,24 +50,24 @@ poetry run koescript --help
 
 # Or activate Poetry shell
 poetry shell
-satori --help
+koescript --help
 ```
 
 ### Prerequisites
 
 - **Python 3.11 or higher**
 - **macOS** (M-series or Intel)
-- **BlackHole** for system audio capture (can be auto-installed via `satori init`)
-- **whisper.cpp** for GPU acceleration (can be auto-installed via `satori init`)
+- **BlackHole** for system audio capture (can be auto-installed via `koescript init`)
+- **whisper.cpp** for GPU acceleration (can be auto-installed via `koescript init`)
 - **Poetry** (for development only)
 
-### Install BlackHole (Optional - Auto-installed by `satori init`)
+### Install BlackHole (Optional - Auto-installed by `koescript init`)
 
 BlackHole is required for capturing system audio (YouTube, Spotify, etc.).
 
 **Automatic installation (recommended):**
 ```bash
-satori init  # Will offer to install BlackHole automatically
+koescript init  # Will offer to install BlackHole automatically
 ```
 
 **Manual installation:**
@@ -83,13 +80,13 @@ brew install blackhole-2ch
 # https://existential.audio/blackhole/
 ```
 
-### Install whisper.cpp (Optional - Auto-installed by `satori init`)
+### Install whisper.cpp (Optional - Auto-installed by `koescript init`)
 
 For 30x faster transcription with GPU acceleration.
 
 **Automatic installation (recommended):**
 ```bash
-satori init  # Will offer to build whisper.cpp automatically
+koescript init  # Will offer to build whisper.cpp automatically
 ```
 
 **Manual installation:**
@@ -116,57 +113,57 @@ make
 Run initialization - this will automatically offer to install dependencies:
 
 ```bash
-satori init
+koescript init
 ```
 
 This will:
 - **Automatically install BlackHole** (with your consent) via Homebrew for system audio capture
 - **Automatically build whisper.cpp** (with your consent) for GPU acceleration
-- Create necessary directories (`~/.satori/`)
+- Create necessary directories (`~/.koescript/`)
 - Download initial Whisper model (base by default - multilingual)
 - Verify audio device availability
 
 **Skip automatic installation:**
 ```bash
-satori init --skip-deps  # Install dependencies manually
+koescript init --skip-deps  # Install dependencies manually
 ```
 
 **Options:**
 
 ```bash
 # Skip model download
-satori init --skip-download
+koescript init --skip-download
 
 # Download specific model
-satori init --model small     # 466 MB
-satori init --model medium    # 1.5 GB (recommended)
-satori init --model large     # 1.5 GB (best quality)
+koescript init --model small     # 466 MB
+koescript init --model medium    # 1.5 GB (recommended)
+koescript init --model large     # 1.5 GB (best quality)
 ```
 
 ### 2. Start Transcribing
 
 ```bash
 # Basic transcription with default settings
-satori translate
+koescript translate
 
 # Transcribe YouTube/Spotify (with BlackHole)
-satori translate --loopback
+koescript translate --loopback
 
 # Translate Japanese to English
-satori translate --loopback --language ja --translate-to en --model medium
+koescript translate --loopback --language ja --translate-to en --model medium
 ```
 
 ### 3. List Audio Devices
 
 ```bash
-satori devices
+koescript devices
 ```
 
 ### 4. Get Help
 
 ```bash
-satori --help
-satori translate --help
+koescript --help
+koescript translate --help
 ```
 
 ## Model Selection Guide
@@ -185,13 +182,13 @@ Choose the right model based on your needs:
 
 ```bash
 # Fast transcription for quick tests
-satori translate --model small
+koescript translate --model small
 
 # Better accuracy for important work (default)
-satori translate --model medium
+koescript translate --model medium
 
 # Best quality for critical content
-satori translate --model large
+koescript translate --model large
 ```
 
 ### Performance Notes:
@@ -203,7 +200,7 @@ satori translate --model large
 
 **Important:**
 - whisper.cpp is **required** for transcription
-- Run `satori init` to automatically install and build with GPU support
+- Run `koescript init` to automatically install and build with GPU support
 - Translation quality improves significantly with larger models
 - Models are downloaded once and cached for future use
 - You can switch between models anytime
@@ -212,19 +209,19 @@ satori translate --model large
 
 ```bash
 # Transcribe YouTube videos
-satori translate --loopback --model medium
+koescript translate --loopback --model medium
 
 # Translate Japanese anime in real-time
-satori translate --loopback --language ja --translate-to en --model large
+koescript translate --loopback --language ja --translate-to en --model large
 
 # Transcribe Spotify podcasts
-satori translate --loopback --model small
+koescript translate --loopback --model small
 
 # Live meeting transcription
-satori translate --model medium
+koescript translate --model medium
 
 # Translate Hindi news to English
-satori translate --loopback --language hi --translate-to en --model medium
+koescript translate --loopback --language hi --translate-to en --model medium
 ```
 
 ## Documentation
