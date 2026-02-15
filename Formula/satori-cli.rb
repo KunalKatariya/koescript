@@ -10,7 +10,6 @@ class SatoriCli < Formula
 
   depends_on "python@3.11"
   depends_on "portaudio"
-  depends_on "ffmpeg"
 
   def install
     # Create a virtual environment with pip
