@@ -40,17 +40,17 @@ import click
 from rich.console import Console
 from rich.text import Text
 
-from satori.ai import Translator
-from satori.ai.whisper_cpp import WhisperCppTranscriber
-from satori.audio import AudioCapture
-from satori.models import ModelDownloader
-from satori.ui.app import SatoriApp
+from koescript.ai import Translator
+from koescript.ai.whisper_cpp import WhisperCppTranscriber
+from koescript.audio import AudioCapture
+from koescript.models import ModelDownloader
+from koescript.ui.app import SatoriApp
 
 # Set up file logging
 import logging
 from pathlib import Path
 
-log_dir = Path.home() / ".satori" / "logs"
+log_dir = Path.home() / ".koescript" / "logs"
 log_dir.mkdir(parents=True, exist_ok=True)
 log_file = log_dir / "satori.log"
 
@@ -168,7 +168,7 @@ def init(model_size: str, skip_download: bool, skip_deps: bool):
     # Step 1: Create directories
     console.print("[bold]1. Setting up directories...[/bold]")
     try:
-        satori_dir = Path.home() / ".satori"
+        satori_dir = Path.home() / ".koescript"
         models_dir = satori_dir / "models" / "whisper"
         logs_dir = satori_dir / "logs"
 
@@ -186,7 +186,7 @@ def init(model_size: str, skip_download: bool, skip_deps: bool):
 
     # Step 2: Auto-install dependencies (if not skipped)
     if not skip_deps:
-        from satori.setup import DependencyInstaller
+        from koescript.setup import DependencyInstaller
 
         DependencyInstaller.auto_setup_dependencies()
     else:
@@ -485,7 +485,7 @@ def translate(
 
         try:
             # Import here to avoid circular dependency
-            from satori.ai.whisper_cpp import find_whisper_binary
+            from koescript.ai.whisper_cpp import find_whisper_binary
 
             # Check if whisper.cpp is installed first
             whisper_binary = find_whisper_binary()

@@ -1,7 +1,7 @@
-# Satori CLI - Development Roadmap
+# Koescript - Development Roadmap
 
 ## Project Overview
-Satori is a professional live translation CLI tool for macOS. It captures audio from a virtual audio input (BlackHole), processes it with Faster Whisper, and displays real-time translations through an intuitive TUI interface.
+Koescript is a professional live translation CLI tool for macOS. It captures audio from a virtual audio input (BlackHole), processes it with Faster Whisper, and displays real-time translations through an intuitive TUI interface.
 
 ## Tech Stack
 - **Language**: Python 3.11+
@@ -52,7 +52,7 @@ Satori is a professional live translation CLI tool for macOS. It captures audio 
 ### Phase 5: AI Integration ✅ DONE
 - [x] Create WhisperTranscriber wrapper service
 - [x] Implement lazy model loading with caching
-- [x] Add async audio capture loop to SatoriApp
+- [x] Add async audio capture loop to KoescriptApp
 - [x] Integrate real-time transcription with UI updates
 - [x] Add CLI options for device, model, and language
 - [x] Implement graceful shutdown and error handling

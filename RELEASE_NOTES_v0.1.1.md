@@ -1,4 +1,4 @@
-# Satori CLI v0.1.1 Release Notes
+# Koescript v0.1.1 Release Notes
 
 **Release Date:** February 15, 2025
 
@@ -26,20 +26,20 @@ This maintenance release improves the installation experience and fixes several 
 
 ### Homebrew (Recommended)
 ```bash
-brew tap KunalKatariya/satori-cli
-brew install satori-cli
+brew tap KunalKatariya/koescript
+brew install koescript
 ```
 
 ### Upgrading from v0.1.0
 ```bash
 brew update
-brew upgrade satori-cli
+brew upgrade koescript
 ```
 
 ### From Source
 ```bash
-git clone https://github.com/KunalKatariya/satori-cli.git
-cd satori-cli
+git clone https://github.com/KunalKatariya/koescript.git
+cd koescript
 poetry install
 ```
 
@@ -53,7 +53,7 @@ poetry install
 - `401f557` - Fix Homebrew formula to use standard virtualenv installation
 - `c1ce36d` - Add Homebrew formula with stable release URL
 
-**View full diff:** https://github.com/KunalKatariya/satori-cli/compare/v0.1.0...v0.1.1
+**View full diff:** https://github.com/KunalKatariya/koescript/compare/v0.1.0...v0.1.1
 
 ---
 
@@ -70,7 +70,7 @@ None reported for this release.
 
 ## Getting Help
 
-- **Issues:** https://github.com/KunalKatariya/satori-cli/issues
+- **Issues:** https://github.com/KunalKatariya/koescript/issues
 - **Documentation:** See README.md and USAGE.md in the repository
 
 ## Credits

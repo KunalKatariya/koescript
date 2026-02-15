@@ -1,6 +1,6 @@
-# Contributing to Satori CLI
+# Contributing to Koescript
 
-Thank you for your interest in contributing to Satori CLI! This guide will help you get started with development.
+Thank you for your interest in contributing to Koescript! This guide will help you get started with development.
 
 ## Project Structure
 
@@ -55,8 +55,8 @@ satori/
 
 1. **Fork and clone the repository:**
    ```bash
-   git clone https://github.com/yourusername/satori-cli.git
-   cd satori-cli
+   git clone https://github.com/yourusername/koescript.git
+   cd koescript
    ```
 
 2. **Install dependencies:**
@@ -81,7 +81,7 @@ satori/
 
 5. **Verify installation:**
    ```bash
-   satori --help
+   koescript --help
    ```
 
 ### Development Workflow

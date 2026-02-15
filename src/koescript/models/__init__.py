@@ -1,5 +1,5 @@
 """Models module for Satori CLI."""
 
-from satori.models.downloader import ModelDownloader
+from koescript.models.downloader import ModelDownloader
 
 __all__ = ["ModelDownloader"]

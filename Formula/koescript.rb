@@ -1,9 +1,9 @@
-class SatoriCli < Formula
+class Koescript < Formula
   include Language::Python::Virtualenv
 
   desc "Real-time multilingual transcription and translation with GPU acceleration"
-  homepage "https://github.com/KunalKatariya/satori-cli"
-  url "https://github.com/KunalKatariya/satori-cli/archive/refs/tags/v0.1.1.tar.gz"
+  homepage "https://github.com/KunalKatariya/koescript"
+  url "https://github.com/KunalKatariya/koescript/archive/refs/tags/v0.1.1.tar.gz"
   sha256 "f2fd5a2a9de7f1dcdcff2ad70f0cc090a350e9986e2fa1892cb41f50d2acf5b6"
   license "MIT"
   version "0.1.1"
@@ -20,15 +20,15 @@ class SatoriCli < Formula
     system libexec/"bin/pip", "install", buildpath
 
     # Create a wrapper script
-    (bin/"satori").write_env_script libexec/"bin/satori", {}
+    (bin/"koescript").write_env_script libexec/"bin/koescript", {}
   end
 
   def caveats
     <<~EOS
-      Satori CLI has been installed!
+      Koescript CLI has been installed!
 
       First-time setup:
-        1. Run: satori init
+        1. Run: koescript init
            This will download and set up whisper.cpp with Metal GPU acceleration.
 
         2. Install BlackHole for audio capture:
@@ -37,25 +37,25 @@ class SatoriCli < Formula
         3. Configure audio routing:
            - Open Audio MIDI Setup
            - Create a Multi-Output Device with your speakers + BlackHole
-           - In Satori settings, select BlackHole as input device
+           - In Koescript settings, select BlackHole as input device
 
       Usage examples:
         # Real-time transcription
-        satori transcribe
+        koescript transcribe
 
         # With translation (Japanese → English)
-        satori transcribe --translate --target-lang en
+        koescript transcribe --translate --target-lang en
 
         # Configure settings
-        satori config
+        koescript config
 
       For more information, visit:
-        https://github.com/KunalKatariya/satori-cli
+        https://github.com/KunalKatariya/koescript
     EOS
   end
 
   test do
-    assert_match version.to_s, shell_output("#{bin}/satori --version")
-    assert_match "Usage:", shell_output("#{bin}/satori --help")
+    assert_match version.to_s, shell_output("#{bin}/koescript --version")
+    assert_match "Usage:", shell_output("#{bin}/koescript --help")
   end
 end

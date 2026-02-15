@@ -4,6 +4,6 @@ __version__ = "0.1.1"
 __author__ = "Your Name"
 __email__ = "your.email@example.com"
 
-from satori.cli import cli, print_logo
+from koescript.cli import cli, print_logo
 
 __all__ = ["cli", "print_logo", "__version__"]

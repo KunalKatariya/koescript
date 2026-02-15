@@ -1,4 +1,4 @@
-# Satori CLI
+# Koescript
 
 A live translation CLI tool for macOS. Capture system audio in real-time, transcribe with Whisper, and translate using a beautiful TUI interface.
 
@@ -30,26 +30,26 @@ A live translation CLI tool for macOS. Capture system audio in real-time, transc
 
 ```bash
 # Install the latest version
-pip install satori-cli
+pip install koescript
 
 # Or with pip3
-pip3 install satori-cli
+pip3 install koescript
 ```
 
-After installation, the `satori` command will be available globally.
+After installation, the `koescript` command will be available globally.
 
 ### Option 2: Install from Source (For Development)
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/satori-cli.git
-cd satori-cli
+git clone https://github.com/yourusername/koescript.git
+cd koescript
 
 # Install with Poetry
 poetry install
 
 # Run with poetry run prefix
-poetry run satori --help
+poetry run koescript --help
 
 # Or activate Poetry shell
 poetry shell
@@ -237,7 +237,7 @@ satori translate --loopback --language hi --translate-to en --model medium
 
 ## Support
 
-- **Issues**: [GitHub Issues](https://github.com/yourusername/satori-cli/issues)
+- **Issues**: [GitHub Issues](https://github.com/yourusername/koescript/issues)
 - **Troubleshooting**: See [TROUBLESHOOTING.md](TROUBLESHOOTING.md)
 - **Questions**: Check [USAGE.md](USAGE.md) for detailed usage guide
 

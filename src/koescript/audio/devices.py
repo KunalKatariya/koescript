@@ -35,7 +35,7 @@ class DeviceManager:
         Args:
             config_path: Path to config file (optional)
         """
-        self.config_path = config_path or Path.home() / ".satori" / "devices.json"
+        self.config_path = config_path or Path.home() / ".koescript" / "devices.json"
         self.config = self._load_config()
 
     def _load_config(self) -> DeviceConfig:

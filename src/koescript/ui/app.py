@@ -11,10 +11,10 @@ from rich.text import Text
 from textual.app import App, ComposeResult
 from textual.widgets import Footer, Header, RichLog, Static
 
-from satori.audio import AudioCapture
+from koescript.audio import AudioCapture
 
 if TYPE_CHECKING:
-    from satori.ai.translator import Translator
+    from koescript.ai.translator import Translator
 
 logger = logging.getLogger(__name__)
 

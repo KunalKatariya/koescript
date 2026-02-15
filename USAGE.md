@@ -1,6 +1,6 @@
-# Satori CLI Usage Guide
+# Koescript Usage Guide
 
-Complete guide for using Satori CLI commands and features.
+Complete guide for using Koescript commands and features.
 
 ## Table of Contents
 
@@ -22,9 +22,9 @@ satori translate           # Start transcription/translation
 satori config              # Manage configuration
 ```
 
-## satori init
+## koescript init
 
-Initialize Satori for first-time use.
+Initialize Koescript for first-time use.
 
 ### What It Does
 
@@ -73,11 +73,11 @@ You will be prompted before each installation - nothing happens without your con
 
 ### When to Run
 
-- **Required**: Before using Satori for the first time
+- **Required**: Before using Koescript for the first time
 - **Optional**: After upgrading to a new version
 - **Optional**: To download additional models
 
-## satori translate
+## koescript translate
 
 Start live transcription and translation session.
 
@@ -178,7 +178,7 @@ During transcription:
 - `ja` - Japanese
 - `hi` - Hindi
 
-## satori devices
+## koescript devices
 
 List all available audio devices for transcription.
 
@@ -198,7 +198,7 @@ Available Audio Devices:
   3. External Microphone
 
 Tip: Use loopback devices to capture YouTube, Spotify, etc.
-Example: satori translate --device "BlackHole 2ch"
+Example: koescript translate --device "BlackHole 2ch"
 ```
 
 ### Device Types
@@ -207,9 +207,9 @@ Example: satori translate --device "BlackHole 2ch"
 - **Loopback devices**: Virtual devices for system audio (BlackHole, Loopback, Soundflower)
 - **Aggregate devices**: Combined input/output devices
 
-## satori config
+## koescript config
 
-Manage Satori configuration settings.
+Manage Koescript configuration settings.
 
 ### Usage
 
@@ -338,7 +338,7 @@ rm ~/.satori/models/whisper/ggml-tiny.en.bin
 
 ## Environment Variables
 
-You can customize Satori behavior with environment variables:
+You can customize Koescript behavior with environment variables:
 
 ```bash
 # Custom models directory

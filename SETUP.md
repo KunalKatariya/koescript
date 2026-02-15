@@ -1,4 +1,4 @@
-# Satori CLI - Setup & Development Guide
+# Koescript - Setup & Development Guide
 
 ## Table of Contents
 
@@ -76,17 +76,17 @@ poetry run <command>
 poetry shell
 ```
 
-### Running Satori Commands with Poetry
+### Running Koescript Commands with Poetry
 
 ```bash
 # Show CLI help
-poetry run satori --help
+poetry run koescript --help
 
 # Start live translation
-poetry run satori translate
+poetry run koescript translate
 
 # View version
-poetry run satori --version
+poetry run koescript --version
 ```
 
 ### Poetry Configuration

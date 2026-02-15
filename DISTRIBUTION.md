@@ -1,6 +1,6 @@
 # Distribution Guide
 
-## How to Publish Satori CLI
+## How to Publish Koescript
 
 ### 1. Prepare for Distribution
 
@@ -67,7 +67,7 @@ poetry add --dev twine
 poetry run twine upload --repository testpypi dist/*
 
 # Test install from TestPyPI
-pip install --index-url https://test.pypi.org/simple/ satori-cli
+pip install --index-url https://test.pypi.org/simple/ koescript
 
 # If everything works, upload to real PyPI
 poetry run twine upload dist/*
@@ -95,7 +95,7 @@ When users run `satori translate` for the first time:
 
 Example user experience:
 ```
-$ satori translate --model medium
+$ koescript translate --model medium
 
 Model Required: Whisper medium.en model
 Size: 1.5 GB
@@ -116,7 +116,7 @@ Downloaded: 850.3 / 1500.0 MB (56.7%)
 
 Users install with:
 ```bash
-pip install satori-cli
+pip install koescript
 ```
 
 On first run:
@@ -161,7 +161,7 @@ On first run:
 
 ## Support & Issues
 
-Users can report issues at: https://github.com/yourusername/satori-cli/issues
+Users can report issues at: https://github.com/yourusername/koescript/issues
 
 Include in issue template:
 - OS and version

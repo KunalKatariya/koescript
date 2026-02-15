@@ -1,6 +1,6 @@
 # Troubleshooting Guide
 
-Solutions to common issues with Satori CLI.
+Solutions to common issues with Koescript.
 
 ## Table of Contents
 
@@ -20,10 +20,10 @@ Solutions to common issues with Satori CLI.
 
 ```bash
 # Check if installed
-pip list | grep satori-cli
+pip list | grep koescript
 
 # Reinstall
-pip install --upgrade satori-cli
+pip install --upgrade koescript
 
 # Check Python bin directory is in PATH
 echo $PATH | grep -o "[^:]*python[^:]*"
@@ -33,7 +33,7 @@ echo $PATH | grep -o "[^:]*python[^:]*"
 
 ```bash
 # Option 1: Install in editable mode
-cd /path/to/satori-cli
+cd /path/to/koescript
 pip install -e .
 
 # Option 2: Use Poetry shell
@@ -41,7 +41,7 @@ poetry shell
 satori --help
 
 # Option 3: Use poetry run prefix
-poetry run satori --help
+poetry run koescript --help
 ```
 
 **macOS specific:**
@@ -73,7 +73,7 @@ poetry --version
 
 ```bash
 # Use user installation (don't use sudo with pip)
-pip install --user satori-cli
+pip install --user koescript
 
 # Check file permissions
 ls -la ~/.satori/
@@ -101,7 +101,7 @@ brew list | grep blackhole
 # Check system audio devices
 system_profiler SPAudioDataType
 
-# List devices with Satori
+# List devices with Koescript
 satori devices
 ```
 
@@ -190,7 +190,7 @@ lsof | grep "coreaudio"
 # Play test sound
 afplay /System/Library/Sounds/Glass.aiff
 
-# Should see audio in Satori if Multi-Output is configured correctly
+# Should see audio in Koescript if Multi-Output is configured correctly
 ```
 
 ## Transcription Issues
@@ -375,7 +375,7 @@ WHISPER_METAL=1 make
 - medium: ~10x real-time
 - large: ~10x real-time
 
-**Note:** GPU acceleration with whisper.cpp is required for Satori. If you don't have whisper.cpp installed, run `satori init` to install it automatically.
+**Note:** GPU acceleration with whisper.cpp is required for Koescript. If you don't have whisper.cpp installed, run `satori init` to install it automatically.
 
 ### High Memory Usage
 
@@ -557,7 +557,7 @@ system_profiler SPSoftwareDataType SPHardwareDataType
 # Python version
 python3 --version
 
-# Satori version
+# Koescript version
 satori --version
 
 # List installed packages
@@ -567,11 +567,11 @@ pip list
 ### Get Help
 
 1. Check logs: `~/.satori/logs/satori.log`
-2. Search existing issues: [GitHub Issues](https://github.com/yourusername/satori-cli/issues)
+2. Search existing issues: [GitHub Issues](https://github.com/yourusername/koescript/issues)
 3. Create new issue with:
    - OS and version
    - Python version
-   - Satori version
+   - Koescript version
    - Model being used
    - Commands run
    - Error messages

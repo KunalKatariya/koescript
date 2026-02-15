@@ -8,7 +8,7 @@ import numpy as np
 
 from faster_whisper import WhisperModel
 
-from satori.config.settings import WhisperConfig
+from koescript.config.settings import WhisperConfig
 
 logger = logging.getLogger(__name__)
 

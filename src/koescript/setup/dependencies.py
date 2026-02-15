@@ -103,7 +103,7 @@ class DependencyInstaller:
         Returns:
             Path to binary if found, None otherwise
         """
-        from satori.ai.whisper_cpp import find_whisper_binary
+        from koescript.ai.whisper_cpp import find_whisper_binary
 
         return find_whisper_binary()
 

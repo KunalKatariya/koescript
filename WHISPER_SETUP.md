@@ -1,6 +1,6 @@
 # whisper.cpp Setup Guide
 
-Satori CLI uses whisper.cpp for fast, GPU-accelerated transcription. This guide helps you install it.
+Koescript uses whisper.cpp for fast, GPU-accelerated transcription. This guide helps you install it.
 
 ## Quick Install
 
@@ -29,7 +29,7 @@ make
 
 ## Installation Locations
 
-Satori searches for whisper.cpp in these locations:
+Koescript searches for whisper.cpp in these locations:
 1. `~/whisper.cpp/build/bin/whisper-cli`
 2. `~/whisper.cpp/main`
 3. `/usr/local/bin/whisper-cli`
@@ -39,7 +39,7 @@ Satori searches for whisper.cpp in these locations:
 ## Verify Installation
 
 ```bash
-# Check if satori can find whisper.cpp
+# Check if koescript can find whisper.cpp
 satori translate
 
 # Should show:
@@ -82,7 +82,7 @@ sudo apt install build-essential
 
 ## Alternative: Use CPU Backend
 
-If whisper.cpp installation fails, satori automatically falls back to CPU-based transcription:
+If whisper.cpp installation fails, koescript automatically falls back to CPU-based transcription:
 
 ```bash
 satori translate --backend faster-whisper

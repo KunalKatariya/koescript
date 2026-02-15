@@ -1,10 +1,10 @@
-# Satori CLI v0.1.0 - Initial Release
+# Koescript v0.1.0 - Initial Release
 
 🎤 **Real-time multilingual transcription and translation with GPU acceleration**
 
-## What is Satori?
+## What is Koescript?
 
-Satori is a powerful CLI tool for real-time audio transcription and translation. It uses whisper.cpp with Metal GPU acceleration for lightning-fast transcription (30-50x faster than CPU) and Meta NLLB-200 for high-quality translation.
+Koescript is a powerful CLI tool for real-time audio transcription and translation. It uses whisper.cpp with Metal GPU acceleration for lightning-fast transcription (30-50x faster than CPU) and Meta NLLB-200 for high-quality translation.
 
 ## ✨ Features
 
@@ -30,19 +30,19 @@ Satori is a powerful CLI tool for real-time audio transcription and translation.
 
 #### Homebrew (Recommended)
 ```bash
-brew install KunalKatariya/satori-cli/satori-cli
+brew install KunalKatariya/koescript/koescript
 ```
 
 #### From Source
 ```bash
-git clone https://github.com/KunalKatariya/satori-cli.git
-cd satori-cli
+git clone https://github.com/KunalKatariya/koescript.git
+cd koescript
 poetry install
 ```
 
 ### Setup
 ```bash
-# Initialize Satori (installs dependencies, downloads models)
+# Initialize Koescript (installs dependencies, downloads models)
 satori init
 
 # List available audio devices

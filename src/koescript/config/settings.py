@@ -49,7 +49,7 @@ class SatoriConfig(BaseModel):
     translation: TranslationConfig = Field(default_factory=TranslationConfig)
     auto_save: bool = Field(default=True, description="Auto-save transcriptions")
     log_directory: str = Field(
-        default=str(Path.home() / ".satori" / "logs"),
+        default=str(Path.home() / ".koescript" / "logs"),
         description="Directory for saving logs",
     )
 
@@ -61,7 +61,7 @@ class SatoriConfig(BaseModel):
                 "whisper": {"model_size": "base", "language": "en"},
                 "translation": {"target_language": "en", "provider": "none"},
                 "auto_save": True,
-                "log_directory": "~/.satori/logs",
+                "log_directory": "~/.koescript/logs",
             }
         }
 
@@ -75,7 +75,7 @@ class ConfigManager:
         Args:
             config_path: Path to config file (optional)
         """
-        self.config_path = config_path or Path.home() / ".satori" / "config.json"
+        self.config_path = config_path or Path.home() / ".koescript" / "config.json"
         self.config = self._load_config()
 
     def _load_config(self) -> SatoriConfig:

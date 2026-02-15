@@ -57,10 +57,10 @@ class ModelDownloader:
         """Initialize model downloader.
 
         Args:
-            models_dir: Directory to store models (default: ~/.satori/models)
+            models_dir: Directory to store models (default: ~/.koescript/models)
         """
         if models_dir is None:
-            self.models_dir = Path.home() / ".satori" / "models" / "whisper"
+            self.models_dir = Path.home() / ".koescript" / "models" / "whisper"
         else:
             self.models_dir = Path(models_dir)
 
