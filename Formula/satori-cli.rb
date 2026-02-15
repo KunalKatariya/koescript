@@ -13,8 +13,13 @@ class SatoriCli < Formula
   depends_on "ffmpeg"
 
   def install
-    # Create a virtual environment
-    virtualenv_install_with_resources
+    # Create a virtual environment and install the package
+    virtualenv_create(libexec, "python3.11")
+    system libexec/"bin/pip", "install", "--upgrade", "pip", "setuptools", "wheel"
+    system libexec/"bin/pip", "install", buildpath
+
+    # Create a wrapper script
+    (bin/"satori").write_env_script libexec/"bin/satori", {}
   end
 
   def caveats
