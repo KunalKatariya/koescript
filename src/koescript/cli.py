@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """
-Satori CLI - Main entry point
+Koescript CLI - Main entry point
 """
 
-__version__ = "0.2.0"
+__version__ = "0.3.0"
 
 import sys
 import multiprocessing

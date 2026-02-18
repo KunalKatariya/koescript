@@ -4,8 +4,8 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
 name = "koescript"
-version = "0.2.0"
-description = "Koescript - Real-time audio transcription and translation CLI with GPU acceleration"
+version = "0.3.0"
+description = "Koescript - Cross-platform real-time audio transcription and translation CLI with GPU acceleration"
 readme = "README.md"
 license = "MIT"
 authors = [
